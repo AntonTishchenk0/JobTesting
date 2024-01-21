@@ -1,26 +1,32 @@
 def get_save(*args):
+    """Функция для хранения всех данных"""
     lst = []
     lst.append(args)
     return lst
 
 
 def summa(first_numb, second_numb):
+    """Функция суммы двух чисел"""
     return first_numb + second_numb
 
 
 def sub(first_numb, second_numb):
+    """Функция вычитания двух чисел"""
     return first_numb - second_numb
 
 
 def multi(first_numb, second_numb):
+    """Функция умножения двух чисел"""
     return first_numb * second_numb
 
 
 def div(first_numb, second_numb):
+    """Функция деления двух чисел"""
     return first_numb / second_numb
 
 
 def calc(first_numb, second_numb, operations):
+    """Функция выбора операции между двумя числами"""
     result = None
 
     if operations == '+':
@@ -43,6 +49,7 @@ def calc(first_numb, second_numb, operations):
 
 
 def action_operation():
+    """Функция проверки корректности выбора операции"""
     messenge = input('Select an operation: (Input +, -, *, /):\n'
                      '"+" - adding two numbers\n'
                      '"-" - subtracting two numbers\n'
@@ -69,6 +76,7 @@ def action_operation():
 
 
 def run():
+    """Функция запуска калькулятора и вывода результата"""
     try:
         first_numb = float(input('Input a first number: '))
     except ValueError:
