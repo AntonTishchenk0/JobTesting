@@ -6,6 +6,8 @@ from Smart_Home import Thermostat
 correct_action = ['lamp', 'temp', 'safe']
 request = input('Select your action from the list\n'
                 '(lamp, temp, safe): ').lower()
+while request not in correct_action:
+    request = input('Incorrect input! Enter Lamp, Temp or Safe: ')
 print(f'You have selected a section: {request.upper()}')
 
 if request == 'lamp':
